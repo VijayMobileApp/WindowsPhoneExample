@@ -1,0 +1,62 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="NewExample.Views.DayCalculation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    xmlns:Controls="clr-namespace:CS.Windows.Controls;assembly=CS.Windows.Controls"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="DayCalculationUIContainer" Grid.Row="1" Margin="2,0,2,0">
+            <toolkit:DatePicker x:Name="datePicker" Value="{Binding testDate,Mode=TwoWay}" Header="DatePicker" Margin="2,478,-2,203" />
+            <TextBlock HorizontalAlignment="Left" Margin="35,521,0,0" Name="textBlock8" Foreground="Black" FontSize="26" Text="{Binding datePickerDate}" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="20,27,0,0" Name="textBlock1" Text="Enter Your Birth Date" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" FontStyle="Italic" />
+            <Button Command= "{Binding dayCalculate}" Content="Calculate My Age" Height="72" HorizontalAlignment="Left" Margin="95,177,0,0" Name="button1" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="145,335,0,0" Name="textBlock2" Text="{Binding result, Mode=TwoWay}" VerticalAlignment="Top" />
+            <TextBlock FontSize="26" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="20,302,0,0" Name="textBlock4" Text="Your Age :" VerticalAlignment="Top" />
+            <TextBlock Foreground="GreenYellow" FontSize="26" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="46,383,0,0" Name="textBlock5" Text="{Binding yourAge}" VerticalAlignment="Top" />
+
+            <!--<TextBox Height="72" HorizontalAlignment="Left" Margin="40,92,0,0" Name="textBox4" Text="{Binding dayText, Mode=TwoWay}" VerticalAlignment="Top" Width="94" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="143,92,0,0" Name="textBox3" Text="{Binding monthText, Mode=TwoWay}" VerticalAlignment="Top" Width="104" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="255,92,0,0" Name="textBox2" Text="{Binding yearText, Mode=TwoWay}" VerticalAlignment="Top" Width="139" />-->
+
+            <Controls:WatermarkTextBox WatermarkText="dd" Name="userIDTextBox" Text="{Binding dayText, Mode=TwoWay}" Height="82" HorizontalAlignment="Left" Margin="46,93,0,0"  VerticalAlignment="Top" Width="88" />
+            <Controls:WatermarkTextBox Height="82" HorizontalAlignment="Left" Margin="145,93,0,0" Name="watermarkTextBox1" Text="{Binding monthText, Mode=TwoWay}" VerticalAlignment="Top" WatermarkText="mm" Width="102" />
+            <Controls:WatermarkTextBox Height="82" HorizontalAlignment="Left" Margin="258,93,0,0" Name="watermarkTextBox2" Text="{Binding yearText, Mode=TwoWay}" VerticalAlignment="Top" WatermarkText="yyyy" Width="136" />
+
+            <TextBlock FontSize="26"  FontWeight="Bold" HorizontalAlignment="Left" Margin="134,107,0,0" Name="textBlock6" Text="/" VerticalAlignment="Top" />
+            <TextBlock FontSize="26" FontWeight="Bold" HorizontalAlignment="Left" Margin="247,109,0,0" Name="textBlock7" Text="/" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="63,423,0,0" Name="textBlock3" Text="{Binding dateTime}"  VerticalAlignment="Top" />
+            <Button Content="Check" Command="{Binding checkDate}" Height="72" HorizontalAlignment="Left" Margin="20,597,0,0" Name="button2" VerticalAlignment="Top" Width="160" />
+        </Grid>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar  -->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

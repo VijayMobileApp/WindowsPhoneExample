@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2B8E7CA-7441-48F5-B1DD-3138D4E8192B}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewExample</RootNamespace>
+    <AssemblyName>NewExample</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>NewExample.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>NewExample.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CS.Windows.Controls">
+      <HintPath>..\..\NewExample\NewExample\Bin\Debug\CS.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\..\..\..\..\..\Beno Windows Phone\Face Book Example\facebook-windows-phone-sample-master\facebook-windows-phone-sample-master\src\facebook-windows-phone-sample\Bin\Debug\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras.WP71">
+      <HintPath>..\..\..\Downloaded\hubtiledatabindingsample\HubTileDataBindingSample\HubTileSample\Bin\Debug\GalaSoft.MvvmLight.Extras.WP71.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.WP71">
+      <HintPath>..\..\..\Downloaded\hubtiledatabindingsample\HubTileDataBindingSample\HubTileSample\Bin\Debug\GalaSoft.MvvmLight.WP71.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools">
+      <HintPath>..\..\..\..\Beno Windows Phone\Examples\ImageTools_0\ImageTools 0.30\bin\Phone\ImageTools.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.Controls">
+      <HintPath>..\..\..\..\Beno Windows Phone\Examples\ImageTools_0\ImageTools 0.30\bin\Phone\ImageTools.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.IO.Gif">
+      <HintPath>..\..\..\..\Beno Windows Phone\Examples\ImageTools_0\ImageTools 0.30\bin\Phone\ImageTools.IO.Gif.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.IO.Png, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MarkHeath.StarRating">
+      <HintPath>C:\Users\sparon\Downloads\MarkHeath.StarRating.1.0.6\MarkHeath.StarRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\..\..\Beno Project\BenoClientApp\TestReactive\TestReactive\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="ReactiveUI.Xaml_WP7">
+      <HintPath>..\..\..\Project\BenoClientApp\TestReactive\TestReactive\Bin\Debug\ReactiveUI.Xaml_WP7.dll</HintPath>
+    </Reference>
+    <Reference Include="ReactiveUI_WP7">
+      <HintPath>..\..\..\Project\BenoClientApp\TestReactive\TestReactive\Bin\Debug\ReactiveUI_WP7.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device" />
+    <Reference Include="System.Observable" />
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\MVVM Example\Bin\Debug\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\MVVM Example\Bin\Debug\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\..\..\Project\BenoClientApp\TestReactive\TestReactive\Bin\Debug\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Interactivity, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="zxing.wp7.1">
+      <HintPath>..\..\..\..\Beno Windows Phone\Examples\ZXing.Net.0.14.0.0\wp7.1\zxing.wp7.1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonList.xaml.cs">
+      <DependentUpon>ButtonList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Constants\Constants.cs" />
+    <Compile Include="Const\AppConstant.cs" />
+    <Compile Include="Const\GetGeoLocation.cs" />
+    <Compile Include="ForLLS\AlphaKeyGroup.cs" />
+    <Compile Include="ForLLS\GroupingLayer.cs" />
+    <Compile Include="ForLLS\SortedLocalGrouping.cs" />
+    <Compile Include="Framework\Extensions.cs" />
+    <Compile Include="IncrementScrollerModel.cs" />
+    <Compile Include="ListBoxTemplate.xaml.cs">
+      <DependentUpon>ListBoxTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModelClass\Address.cs" />
+    <Compile Include="ModelClass\Feature.cs" />
+    <Compile Include="ModelClass\FeatureBasic.cs" />
+    <Compile Include="ModelClass\FeatureDefinition.cs" />
+    <Compile Include="ModelClass\FeatureParameter.cs" />
+    <Compile Include="ModelClass\GroupProductInfoBasic.cs" />
+    <Compile Include="ModelClass\IdentityInfoBasic.cs" />
+    <Compile Include="ModelClass\OrderProduct.cs" />
+    <Compile Include="ModelClass\OrganizationInfoBasic.cs" />
+    <Compile Include="ModelClass\Photo.cs" />
+    <Compile Include="ModelClass\ProductDefinition.cs" />
+    <Compile Include="ModelClass\ProductGroup.cs" />
+    <Compile Include="ModelClass\ProductGroupBasic.cs" />
+    <Compile Include="ModelClass\ProductInfo.cs" />
+    <Compile Include="ModelClass\ProductInfoBasic.cs" />
+    <Compile Include="ModelClass\ProductLink.cs" />
+    <Compile Include="ModelClass\Ratings.cs" />
+    <Compile Include="Model\ListBoxToChangeSelectedRowModel.cs" />
+    <Compile Include="Model\ListBoxWithButtonModel.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapViewDependencyProperty.cs" />
+    <Compile Include="Model\AddToXML_Model.cs" />
+    <Compile Include="Model\Contact_list_Model.cs" />
+    <Compile Include="Model\HtmlContentModel.cs" />
+    <Compile Include="Model\ImageListBoxModel.cs" />
+    <Compile Include="Model\ListBoxEventsModel.cs" />
+    <Compile Include="Model\ListBoxExampleModel.cs" />
+    <Compile Include="Model\ListBoxItemsWithButtonModel.cs" />
+    <Compile Include="Model\ListBoxWithCheckBoxModel.cs" />
+    <Compile Include="Model\ListPickerExampleModel.cs" />
+    <Compile Include="Model\LongListSelcetorExampleModel.cs" />
+    <Compile Include="Model\MainPageModel.cs" />
+    <Compile Include="Model\MapPageModel.cs" />
+    <Compile Include="Model\MVVMListBoxModel.cs" />
+    <Compile Include="Model\OrderDetailModel.cs" />
+    <Compile Include="Model\TestModel.cs" />
+    <Compile Include="Model\UserControlListboxModel.cs" />
+    <Compile Include="Model\XML_ExtractionModel.cs" />
+    <Compile Include="PathToImageConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScrollViewerMonitor.cs" />
+    <Compile Include="SlidingMenu.xaml.cs">
+      <DependentUpon>SlidingMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\AddToXMLViewModel.cs" />
+    <Compile Include="ViewModel\AppVersionCheckViewModel.cs" />
+    <Compile Include="ViewModel\BottomBarColorChangeViewModel.cs" />
+    <Compile Include="ViewModel\BottomTabBarViewModel.cs" />
+    <Compile Include="ViewModel\Contacts_list_ViewModel.cs" />
+    <Compile Include="ViewModel\CountTheTextViewModel.cs" />
+    <Compile Include="ViewModel\CustomMessageBoxViewModel.cs" />
+    <Compile Include="ViewModel\DateFormatExampleViewModel.cs" />
+    <Compile Include="ViewModel\DayCalculationViewModel.cs" />
+    <Compile Include="ViewModel\DictionaryExampleViewModel.cs" />
+    <Compile Include="ViewModel\EmailOrPhoneViewModel.cs" />
+    <Compile Include="ViewModel\FacebookInfoPageViewModel.cs" />
+    <Compile Include="ViewModel\FacebookLoginPageViewModel.cs" />
+    <Compile Include="ViewModel\GifToPngExampleViewModel.cs" />
+    <Compile Include="ViewModel\HtmlContentViewModel.cs" />
+    <Compile Include="ViewModel\ImageListBoxViewModel.cs" />
+    <Compile Include="ViewModel\ImageSelectionExampleViewModel.cs" />
+    <Compile Include="ViewModel\IncrementScrollerViewModel.cs" />
+    <Compile Include="ViewModel\IndexPage2ViewModel.cs" />
+    <Compile Include="ViewModel\IndexPage3ViewModel.cs" />
+    <Compile Include="ViewModel\IndexPage4ViewModel.cs" />
+    <Compile Include="ViewModel\IsolatedExample2ViewModel.cs" />
+    <Compile Include="ViewModel\IsolatedStorageExampleViewModel.cs" />
+    <Compile Include="ViewModel\LatitudeAndLogidtudeViewModel.cs" />
+    <Compile Include="ViewModel\ListBoxEventsViewModel.cs" />
+    <Compile Include="ViewModel\ListBoxExampleViewModel.cs" />
+    <Compile Include="ViewModel\ListBoxItemsWithButtonViewModel.cs" />
+    <Compile Include="ViewModel\ListBoxToChangeSelectedRowViewModel.cs" />
+    <Compile Include="ViewModel\ListBoxWithButtonViewModel.cs" />
+    <Compile Include="ViewModel\ListBoxWithCheckBoxViewModel.cs" />
+    <Compile Include="ViewModel\ListPickerExampleViewModel.cs" />
+    <Compile Include="ViewModel\LoadTheSamePageViewModel.cs" />
+    <Compile Include="ViewModel\LongListSelcetorExampleViewModel.cs" />
+    <Compile Include="ViewModel\MainPageViewModel.cs" />
+    <Compile Include="ViewModel\MapPageViewModel.cs" />
+    <Compile Include="ViewModel\MessageBoxExampleViewModel.cs" />
+    <Compile Include="ViewModel\MVVMListBoxViewModel.cs" />
+    <Compile Include="ViewModel\OrderDetailPageViewModel.cs" />
+    <Compile Include="ViewModel\PreviousDayCalculationViewModel.cs" />
+    <Compile Include="ViewModel\QRCodeGeneratorViewModel.cs" />
+    <Compile Include="ViewModel\ReceiveDataFromAnotherPageViewModel.cs" />
+    <Compile Include="ViewModel\RedirectPageViewModel.cs" />
+    <Compile Include="ViewModel\RoughPageViewModel.cs" />
+    <Compile Include="ViewModel\SendDataToAnotherPageViewModel.cs" />
+    <Compile Include="ViewModel\SlidingMenuViewModel.cs" />
+    <Compile Include="ViewModel\SortingExampleViewModel.cs" />
+    <Compile Include="ViewModel\StarRatingExampleViewModel.cs" />
+    <Compile Include="ViewModel\TestViewModel.cs" />
+    <Compile Include="ViewModel\UserControlListboxViewModel.cs" />
+    <Compile Include="ViewModel\WebBrowserExampleViewModel.cs" />
+    <Compile Include="ViewModel\XML_ExtractionViewModel.cs" />
+    <Compile Include="Views\AddToXML.xaml.cs">
+      <DependentUpon>AddToXML.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BottomTabBar.xaml.cs">
+      <DependentUpon>BottomTabBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppVersionCheck.xaml.cs">
+      <DependentUpon>AppVersionCheck.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BottomBarColorChange.xaml.cs">
+      <DependentUpon>BottomBarColorChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts_list.xaml.cs">
+      <DependentUpon>Contacts_list.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CountTheText.xaml.cs">
+      <DependentUpon>CountTheText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomMessageBox.xaml.cs">
+      <DependentUpon>CustomMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DateFormatExample.xaml.cs">
+      <DependentUpon>DateFormatExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DayCalculation.xaml.cs">
+      <DependentUpon>DayCalculation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DictionaryExample.xaml.cs">
+      <DependentUpon>DictionaryExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DummyPage.xaml.cs">
+      <DependentUpon>DummyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmailOrPhone.xaml.cs">
+      <DependentUpon>EmailOrPhone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FacebookInfoPage.xaml.cs">
+      <DependentUpon>FacebookInfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FacebookLoginPage.xaml.cs">
+      <DependentUpon>FacebookLoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GetPagesFromPageStack.xaml.cs">
+      <DependentUpon>GetPagesFromPageStack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GifToPngExample.xaml.cs">
+      <DependentUpon>GifToPngExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HtmlContent.xaml.cs">
+      <DependentUpon>HtmlContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageListBox.xaml.cs">
+      <DependentUpon>ImageListBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageSelectionExample.xaml.cs">
+      <DependentUpon>ImageSelectionExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IncrementScroller.xaml.cs">
+      <DependentUpon>IncrementScroller.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IndexPage2.xaml.cs">
+      <DependentUpon>IndexPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IndexPage3.xaml.cs">
+      <DependentUpon>IndexPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IndexPage4.xaml.cs">
+      <DependentUpon>IndexPage4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IsolatedExample2.xaml.cs">
+      <DependentUpon>IsolatedExample2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IsolatedStorageExample.xaml.cs">
+      <DependentUpon>IsolatedStorageExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LanguageExample.xaml.cs">
+      <DependentUpon>LanguageExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LatitudeAndLogidtude.xaml.cs">
+      <DependentUpon>LatitudeAndLogidtude.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListBoxEvents.xaml.cs">
+      <DependentUpon>ListBoxEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListBoxExample.xaml.cs">
+      <DependentUpon>ListBoxExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListBoxItemsWithButton.xaml.cs">
+      <DependentUpon>ListBoxItemsWithButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListBoxToChangeSelectedRow.xaml.cs">
+      <DependentUpon>ListBoxToChangeSelectedRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListBoxWithButton.xaml.cs">
+      <DependentUpon>ListBoxWithButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListBoxWithCheckBox.xaml.cs">
+      <DependentUpon>ListBoxWithCheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListPickerExample.xaml.cs">
+      <DependentUpon>ListPickerExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoadTheSamePage.xaml.cs">
+      <DependentUpon>LoadTheSamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LongListSelcetorExample.xaml.cs">
+      <DependentUpon>LongListSelcetorExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessageBoxExample.xaml.cs">
+      <DependentUpon>MessageBoxExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MVVMListBox.xaml.cs">
+      <DependentUpon>MVVMListBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderDetailPage.xaml.cs">
+      <DependentUpon>OrderDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PanoramaPage1.xaml.cs">
+      <DependentUpon>PanoramaPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PivotExample.xaml.cs">
+      <DependentUpon>PivotExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PivotPage1.xaml.cs">
+      <DependentUpon>PivotPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PreviousDayCalculation.xaml.cs">
+      <DependentUpon>PreviousDayCalculation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QRCodeGenerator.xaml.cs">
+      <DependentUpon>QRCodeGenerator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QRCodeScanner.xaml.cs">
+      <DependentUpon>QRCodeScanner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReceiveDataFromAnotherPage.xaml.cs">
+      <DependentUpon>ReceiveDataFromAnotherPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RedirectPage.xaml.cs">
+      <DependentUpon>RedirectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoughPage.xaml.cs">
+      <DependentUpon>RoughPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SendDataToAnotherPage.xaml.cs">
+      <DependentUpon>SendDataToAnotherPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SlideExample.xaml.cs">
+      <DependentUpon>SlideExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SortingExample.xaml.cs">
+      <DependentUpon>SortingExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StarRatingExample.xaml.cs">
+      <DependentUpon>StarRatingExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Test.xaml.cs">
+      <DependentUpon>Test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControlListbox.xaml.cs">
+      <DependentUpon>UserControlListbox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WebBrowserExample.xaml.cs">
+      <DependentUpon>WebBrowserExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\XML_Extraction.xaml.cs">
+      <DependentUpon>XML_Extraction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsPhone7Unleashed\ArgumentValidator.cs" />
+    <Compile Include="WindowsPhone7Unleashed\BindingListener.cs" />
+    <Compile Include="WindowsPhone7Unleashed\BooleanToVisibilityConverter.cs" />
+    <Compile Include="WindowsPhone7Unleashed\DelegateCommand.cs" />
+    <Compile Include="WindowsPhone7Unleashed\IEventCommand.cs" />
+    <Compile Include="WindowsPhone7Unleashed\ImplicitTypeConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="ButtonList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListBoxTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SlidingMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AddToXML.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BottomTabBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppVersionCheck.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BottomBarColorChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts_list.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CountTheText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CustomMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DateFormatExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DayCalculation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DictionaryExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DummyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EmailOrPhone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FacebookInfoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FacebookLoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GetPagesFromPageStack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GifToPngExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HtmlContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ImageListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ImageSelectionExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IncrementScroller.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\IndexPage2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IndexPage3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IndexPage4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IsolatedExample2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IsolatedStorageExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LanguageExample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LatitudeAndLogidtude.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListBoxEvents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListBoxExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListBoxItemsWithButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListBoxToChangeSelectedRow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListBoxWithButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListBoxWithCheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListPickerExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoadTheSamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LongListSelcetorExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MessageBoxExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MVVMListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\OrderDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PanoramaPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PivotExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PivotPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PreviousDayCalculation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\QRCodeGenerator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\QRCodeScanner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ReceiveDataFromAnotherPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RedirectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RoughPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SendDataToAnotherPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SlideExample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SortingExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StarRatingExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControlListbox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WebBrowserExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\XML_Extraction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Constants\HtmlContent.xml" />
+    <Resource Include="Images\icon_slider_0_default.png" />
+    <Resource Include="Images\icon_slider_0_selected.png" />
+    <Resource Include="Images\icon_slider_1_default.png" />
+    <Resource Include="Images\icon_slider_1_selected.png" />
+    <Resource Include="Images\icon_slider_2_default.png" />
+    <Resource Include="Images\icon_slider_3_default.png" />
+    <Resource Include="Images\icon_slider_3_selected.png" />
+    <Resource Include="Images\icon_slider_2_selected.png" />
+    <Resource Include="Images\icon_slider_4_default.png" />
+    <Resource Include="Images\icon_slider_4_selected.png" />
+    <Resource Include="Images\icon_slider_5_default.png" />
+    <Resource Include="Images\icon_slider_5_selected.png" />
+    <Resource Include="Images\icon_slider_6_default.png" />
+    <Resource Include="Images\icon_slider_6_selected.png" />
+    <Resource Include="Images\icon_slider_7_default.png" />
+    <Resource Include="Images\icon_slider_7_selected.png" />
+    <Resource Include="Images\icon_slider_8_selected.png" />
+    <Resource Include="Images\icon_slider_8_default.png" />
+    <Resource Include="Images\icon_slider_9_default.png" />
+    <Resource Include="Images\icon_slider_9_selected.png" />
+    <Resource Include="Images\icon_slider_10_default.png" />
+    <Resource Include="Images\icon_slider_10_selected.png" />
+    <Resource Include="Images\icon_slider_11_default.png" />
+    <Resource Include="Images\icon_slider_11_selected.png" />
+    <Resource Include="Images\icon_slider_12_default.png" />
+    <Resource Include="Images\icon_slider_12_selected.png" />
+    <Resource Include="Images\icon_decrease.png" />
+    <Resource Include="Images\balloon_disclosure.png" />
+    <Content Include="orderDetail.xml" />
+    <Content Include="OrderDetailView.xml" />
+    <Content Include="WebXML.xml" />
+    <Resource Include="Images\icon_man.png" />
+    <Resource Include="Images\Penguins.jpg" />
+    <Resource Include="Images\Koala.jpg" />
+    <Resource Include="Images\Hydrangeas.jpg" />
+    <Resource Include="Images\icon_star_empty.png" />
+    <Resource Include="Images\icon_increase.png" />
+    <Content Include="Help.htm" />
+    <Content Include="RatingXML.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Student.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

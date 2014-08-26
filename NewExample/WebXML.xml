@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<html>
+  <head>
+    <title>Extra Tours</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="jquery.mobile-1.3.2.min.css"/>
+    <script src="jquery-1.7.1.min.js"></script>
+    <script src="jquery.mobile-1.3.2.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $('#formd43854ca95304bc4837b11503ca47d45').submit(function(){
+      var dataString = "data=<Data>
+        <IdentityNo>
+          2eaf093e-ce36-4d29-97e
+          a-88a1e2b80420
+        </IdentityNo>
+        <Language>en_US</Language>
+        <FormID>d43854ca95304bc4837b11503ca47d45</FormID>
+        <OrganizationID>
+          e9962592-9e45-4a40-9785-15609d5c44e1
+        </OrganizationID>
+        <FormInfos>
+          <FormInfo>
+            <Key>controlc8999b1997a240c4a8c813830ff610a9</Key>
+            <Title>
+              Tour
+            </Title>
+            <Value>" + $('#controlc8999b1997a240c4a8c813830ff610a9').val() + "</Value>
+          </FormInfo>
+          <FormInfo>
+            <Key>
+              control4e7ebbdb7250410e9c60b2341979f500
+            </Key>
+            <Title>Number Of People</Title>
+            <Value>
+              " + $('#control4e7ebbdb7
+              250410e9c60b2341979f500').val() + "
+            </Value>
+          </FormInfo>
+          <FormInfo>
+            <Key>controlf76281c2b5cb46a1b944b21e9e7fa79a</Key>
+            <Title>Notes</Title>
+            <Value>
+              " + $('#controlf76281c2b5cb46a1b944b21e9e7fa79a').val() + "
+            </Value>
+          </FormInfo>
+        </FormInfos>
+      </Data>";$.ajax({
+      type: 'POST',
+      url: 'http://dev.corbone.com:7070/servFormProcess/fps',
+      dataType: 'jsonp',
+      data: dataString,
+      success: function(data){
+      alert('Success');
+      $.mobile.changePage($("#thanks"));
+      },
+      error: function(xhr, status, text) {
+
+      $.mobile.changePage($("#thanks"));
+      }
+      });
+      });
+      });
+    </script>
+  </head>
+  <body>
+
+    <div data-role="page" id="page1">
+
+      <div data-role="header">
+        <h1>Extra Tours</h1>
+      </div>
+      <div data-role="content" align="left">
+        <form id="formd43854ca95304bc4837b11503ca47d45">
+          <p>
+            <label for="controlc8999b1997a240c4a8c813830ff610a9">Tour</label>/p>
+            <select id="controlc8999b1997a240c4a8c813830ff610a9">
+              <option value="1">Amboseli National Park</option>
+              <option value="2">Mini Safari</option>
+              <option value="3">Climb Mount Kilimanjaro</option>
+            </select>
+            <p>
+              <label for="control4e7ebbdb7250410e9c60b2341979f500">
+                Number Of
+                People
+              </label>
+            </p>
+            <select id="control4e7ebbdb7250410e9c60b2341979f500">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4+</option>
+            </select>
+            <p>
+              <label for="controlf76281c2b5cb46a1b944b21e9e7fa79a">
+                Notes
+              </label>
+            </p>
+            <input id="controlf76281c2b5cb46a1b944b21e9e7fa79a" type="text" />
+            <input id="submit" value="Send" type="submit" data-theme="b"/>
+          </p>
+        </form>
+      </div>
+
+    </div>
+
+    <div data-role="page" id="thanks">
+
+      <div data-role="header">
+        <h1>Extra Tours</h1>
+      </div>
+      <div data-role="content" align="center">
+        <form id="formd43854ca95304bc4837b11503ca47d45">
+          <img src="https://s3.amazonaws.com/BenoOrganizationLogos/identityThumb_2ad45c21428748c5a014a063d08f49c0_20131023.jpg" />
+          <label>Thank You</label>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

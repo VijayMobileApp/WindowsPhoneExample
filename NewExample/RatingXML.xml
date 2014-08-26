@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Ratings>
+  
+  <Rating>
+    <RatingInterval>1</RatingInterval>
+    <RatingCount>0</RatingCount>
+  </Rating>
+  
+  <Rating>
+    <RatingInterval>2</RatingInterval>
+    <RatingCount>0</RatingCount>
+  </Rating>
+  
+  <Rating>
+    <RatingInterval>3</RatingInterval>
+    <RatingCount>1</RatingCount>
+  </Rating>
+  
+  <Rating>
+    <RatingInterval>4</RatingInterval>
+    <RatingCount>0</RatingCount>
+  </Rating>
+  
+  <Rating>
+    <RatingInterval>5</RatingInterval>
+    <RatingCount>1</RatingCount>
+  </Rating>
+  
+  <TotalRatingCount>0</TotalRatingCount>
+  <TotalRatingCountBeno>2</TotalRatingCountBeno>
+  <TotalRatingCountFacebook>0</TotalRatingCountFacebook>
+  <TotalRatingCountTwitter>0</TotalRatingCountTwitter>
+  <RatingValue>0</RatingValue>
+</Ratings>
